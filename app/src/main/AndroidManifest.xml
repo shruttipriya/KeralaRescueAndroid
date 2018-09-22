@@ -21,6 +21,10 @@
         <activity android:name=".ui.home.HomeActivity"
             android:screenOrientation="portrait">
         </activity>
+
+        <activity android:name=".ui.emergency_sos.EmergencySosActivity"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>

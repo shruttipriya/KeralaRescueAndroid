@@ -3,6 +3,7 @@ package android.keralarescue.com.keralarescueandroid.ui.home
 import android.content.Context
 import android.content.Intent
 import android.keralarescue.com.keralarescueandroid.R
+import android.keralarescue.com.keralarescueandroid.ui.emergency_sos.EmergencySosActivity
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
@@ -31,8 +32,7 @@ class HomeActivity:AppCompatActivity() {
 
     private fun initUI() {
         emergency_sos_btn.setOnClickListener({
-            //TODO
-            this.toastComingSoon()
+            startActivity(EmergencySosActivity.getNewIntent(this))
         })
 
         prepare_btn.setOnClickListener { this.toastComingSoon() }
