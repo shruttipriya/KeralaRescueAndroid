@@ -33,4 +33,8 @@ dependencies {
 
     //Flash lib
     implementation 'com.github.Abhi347:NoobCameraFlash:0.2.0'
+
+    //Timber
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
 }

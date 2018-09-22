@@ -8,6 +8,7 @@ import android.keralarescue.com.keralarescueandroid.util.FLashUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_emergency_sos.*
+import timber.log.Timber
 
 class EmergencySosActivity: BaseActivity() {
 
@@ -39,6 +40,10 @@ class EmergencySosActivity: BaseActivity() {
     //////////////////////////////////////////////////
 
     private fun initUI() {
-        flash_light.setOnClickListener({flashManager.toggleFlash()})
+        flash_light.setOnClickListener({
+            Timber.d("Toggling camera flash")
+            flashManager.toggleFlash()
+
+        })
     }
 }
