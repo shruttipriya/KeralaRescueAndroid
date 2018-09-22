@@ -9,11 +9,16 @@ import android.os.Handler
 class SplashActivity : AppCompatActivity() {
 
     private var timerHandler = Handler()
-    private val TIME_DELAY = 3000.toLong();
+    private val TIME_DELAY: Long = 3000
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
+
+
+        //TODO need to remove Action bar from themes
+        val actionBar = supportActionBar
+        actionBar!!.hide()
     }
 
     override fun onStart() {

@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">KERALA RESCUE</string>
+    <string name="app_description">Take time to learn survival skills before a flood, keep emergency contacts, to be proud of what we have achived</string>
+
+    <string name="emergency_sos">Emergency / SOS</string>
+    <string name="prepare">Prepare</string>
+    <string name="after_a_flood">After A flood</string>
+    <string name="emergency_contact">Emergency Contacts</string>
+    <string name="rescue_photos">Rescue Photos</string>
+
+    <string name="app_moto">There is n harm in preparing for the est as long as you are prepared for the worst</string>
 </resources>
