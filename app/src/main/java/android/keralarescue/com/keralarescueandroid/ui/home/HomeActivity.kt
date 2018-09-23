@@ -39,7 +39,6 @@ class HomeActivity:AppCompatActivity() {
         after_a_flood_btn.setOnClickListener { this.toastComingSoon() }
         emergency_contact_btn.setOnClickListener { this.toastComingSoon() }
         rescue_photos_btn.setOnClickListener { this.toastComingSoon() }
-
     }
 
 

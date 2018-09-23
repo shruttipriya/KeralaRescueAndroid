@@ -6,7 +6,6 @@ import android.keralarescue.com.keralarescueandroid.R
 import android.keralarescue.com.keralarescueandroid.ui.base.BaseActivity
 import android.keralarescue.com.keralarescueandroid.util.FLashUtil
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_emergency_sos.*
 import timber.log.Timber
 
@@ -24,13 +23,15 @@ class EmergencySosActivity: BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_emergency_sos)
-        initUI()
+
         setUpActionBar()
     }
 
     override fun onStart() {
         super.onStart()
         flashManager.init(this)
+
+        initUI()
     }
 
     override fun onStop() {
@@ -47,6 +48,28 @@ class EmergencySosActivity: BaseActivity() {
     }
 
     private fun initUI() {
+        flash_light_btn.text = getString(R.string.flashlight)
+
+        //TODO need to figure out if flash is enabled or not and enable switch
+        flash_light_btn.setOnCheckedChangeListener({ buttonView, isChecked ->
+            if (isChecked) {
+                flashManager.turnOnFLash()
+            } else {
+                flashManager.tuenOffFlash()
+            }
+        })
+
+        strobe_light_btn.setOnCheckedChangeListener({buttonView, isChecked ->
+            //TODO set Strobe light
+            if (isChecked) {
+
+            } else {
+                
+            }
+        })
+
+
+        // TODO Remove
         flash_light.setOnClickListener({
             Timber.d("Toggling camera flash")
             flashManager.toggleFlash()

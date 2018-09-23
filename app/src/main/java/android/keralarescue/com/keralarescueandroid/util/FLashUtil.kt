@@ -15,6 +15,12 @@ class FLashUtil {
         NoobCameraManager.getInstance().release()
     }
 
+    //////////////////////////////////////////////////////////////////
+
+    fun isFlashOn():Boolean {
+       return NoobCameraManager.getInstance().isFlashOn
+    }
+
     fun turnOnFLash() {
         NoobCameraManager.getInstance().turnOnFlash();
     }
