@@ -12,6 +12,11 @@
         android:theme="@style/KeralaRescueAppTheme">
         <activity android:name=".ui.splash.SplashActivity"
             android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".ui.home.HomeActivity"
+            android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,12 +24,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.home.HomeActivity"
-            android:screenOrientation="portrait">
-        </activity>
-
         <activity android:name=".ui.emergency_sos.EmergencySosActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.home.HomeActivity">
         </activity>
     </application>
 

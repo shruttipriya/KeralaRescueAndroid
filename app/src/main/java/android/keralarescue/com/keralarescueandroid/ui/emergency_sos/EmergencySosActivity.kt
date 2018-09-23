@@ -25,6 +25,7 @@ class EmergencySosActivity: BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_emergency_sos)
         initUI()
+        setUpActionBar()
     }
 
     override fun onStart() {
@@ -38,6 +39,12 @@ class EmergencySosActivity: BaseActivity() {
     }
 
     //////////////////////////////////////////////////
+
+    private fun setUpActionBar() {
+        setSupportActionBar(findViewById(R.id.my_toolbar))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setTitle(R.string.emergency_sos)
+    }
 
     private fun initUI() {
         flash_light.setOnClickListener({
