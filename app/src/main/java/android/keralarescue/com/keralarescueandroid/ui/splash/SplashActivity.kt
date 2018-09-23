@@ -15,10 +15,6 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
-
-        //TODO need to remove Action bar from themes
-        val actionBar = supportActionBar
-        actionBar!!.hide()
     }
 
     override fun onStart() {

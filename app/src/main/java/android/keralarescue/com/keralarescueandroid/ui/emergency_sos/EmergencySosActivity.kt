@@ -12,7 +12,7 @@ import timber.log.Timber
 
 class EmergencySosActivity: BaseActivity() {
 
-    val  flashManager = FLashUtil()
+    private val  flashManager = FLashUtil()
 
     companion object {
         fun getNewIntent(context: Context): Intent {
@@ -43,7 +43,6 @@ class EmergencySosActivity: BaseActivity() {
         flash_light.setOnClickListener({
             Timber.d("Toggling camera flash")
             flashManager.toggleFlash()
-
         })
     }
 }
