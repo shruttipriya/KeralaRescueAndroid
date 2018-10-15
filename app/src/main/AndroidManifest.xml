@@ -28,6 +28,10 @@
             android:screenOrientation="portrait"
             android:parentActivityName=".ui.home.HomeActivity">
         </activity>
+
+        <activity android:name=".ui.prepare.PrepareActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.home.HomeActivity"/>
     </application>
 
 </manifest>

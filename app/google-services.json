@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "813668585931",
+    "firebase_url": "https://rescueapp-e6ca1.firebaseio.com",
+    "project_id": "rescueapp-e6ca1",
+    "storage_bucket": "rescueapp-e6ca1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813668585931:android:08cd6dc8170d8df3",
+        "android_client_info": {
+          "package_name": "android.keralarescue.com.keralarescueandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813668585931-vsk783ngatmq3p3btj1afhg9dejbgdug.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "android.keralarescue.com.keralarescueandroid",
+            "certificate_hash": "63c26f6b62384ef8dc59515214275aa83bbf6373"
+          }
+        },
+        {
+          "client_id": "813668585931-ilmi6oe1rt8ncu6s24fm6u0bbe6lbt3v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2feoQH5eZ4veyaJKfzq-ZZzuqUx_Nz5A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "813668585931-ilmi6oe1rt8ncu6s24fm6u0bbe6lbt3v.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "813668585931-8vdlcspsstn81kr7o5hc55kfaf0drq0j.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.jayahariv.keralarescue"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
