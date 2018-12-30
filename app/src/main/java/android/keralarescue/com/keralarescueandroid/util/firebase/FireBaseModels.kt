@@ -23,4 +23,11 @@ class FireBaseModels {
             val key: String? = null
     )
 
+    data class RescuePhoto(
+            val id: String? = "",
+            val name:String? = "",
+            val story: String? = "",
+            val url:String? = ""
+    )
+
 }

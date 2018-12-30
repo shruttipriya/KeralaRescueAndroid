@@ -5,6 +5,7 @@ import android.content.Intent
 import android.keralarescue.com.keralarescueandroid.R
 import android.keralarescue.com.keralarescueandroid.ui.emergency_sos.EmergencySosActivity
 import android.keralarescue.com.keralarescueandroid.ui.prepare.PrepareActivity
+import android.keralarescue.com.keralarescueandroid.ui.resuephotos.RescuePhotosActivity
 import android.keralarescue.com.keralarescueandroid.util.firebase.FireBaseManager
 import android.os.Bundle
 import android.os.Handler
@@ -35,16 +36,18 @@ class HomeActivity:AppCompatActivity() {
 
     private fun initUI() {
 
-        emergency_sos_btn.setOnClickListener({
+        emergency_sos_btn.setOnClickListener {
             startActivity(EmergencySosActivity.getNewIntent(this))
-        })
+        }
 
-        prepare_btn.setOnClickListener({
+        prepare_btn.setOnClickListener {
             startActivity(PrepareActivity.getNewIntent(this))
-        })
+        }
         after_a_flood_btn.setOnClickListener { this.toastComingSoon() }
         emergency_contact_btn.setOnClickListener { this.toastComingSoon() }
-        rescue_photos_btn.setOnClickListener { this.toastComingSoon() }
+        rescue_photos_btn.setOnClickListener {
+            startActivity(RescuePhotosActivity.getNewIntent(this))
+        }
     }
 
 

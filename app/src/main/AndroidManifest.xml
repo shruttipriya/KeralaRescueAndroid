@@ -32,6 +32,10 @@
         <activity android:name=".ui.prepare.PrepareActivity"
             android:screenOrientation="portrait"
             android:parentActivityName=".ui.home.HomeActivity"/>
+
+        <activity android:name=".ui.resuephotos.RescuePhotosActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.home.HomeActivity"/>
     </application>
 
 </manifest>

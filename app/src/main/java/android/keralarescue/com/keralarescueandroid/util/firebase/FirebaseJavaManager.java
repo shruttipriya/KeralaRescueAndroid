@@ -10,6 +10,9 @@ import com.google.firebase.database.ValueEventListener;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FirebaseJavaManager {
 
 
@@ -65,6 +68,32 @@ public class FirebaseJavaManager {
             public void onCancelled(@NonNull DatabaseError databaseError) {
             }
         });
+    }
 
+    /**
+     * Load Before The flood data
+     * @param path
+     * @param callback
+     */
+    public static  void loadRescuePhotos(String path, @NonNull final FireBaseCallback callback) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference dataBaseReference = database.getReference(path);
+
+        dataBaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                List<FireBaseModels.RescuePhoto> models = new ArrayList<>();
+                for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
+                    FireBaseModels.RescuePhoto model =  postSnapshot.getValue(FireBaseModels.RescuePhoto.class);
+                    models.add(model);
+
+                }
+                callback.onSuccess(models);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+            }
+        });
     }
 }
