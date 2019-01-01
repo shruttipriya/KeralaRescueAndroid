@@ -3,14 +3,20 @@
     package="android.keralarescue.com.keralarescueandroid">
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/KeralaRescueAppTheme">
         <activity android:name=".ui.splash.SplashActivity"
             android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".ui.home.HomeActivity"
+            android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,9 +24,22 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.home.HomeActivity"
-            android:screenOrientation="portrait">
+        <activity android:name=".ui.emergency_sos.EmergencySosActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.home.HomeActivity">
         </activity>
+
+        <activity android:name=".ui.prepare.PrepareActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.home.HomeActivity"/>
+
+        <activity android:name=".ui.resuephotos.RescuePhotosActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.home.HomeActivity"/>
+
+        <activity android:name=".ui.emergency_contacts.EmergencyContactsActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.home.HomeActivity"/>
     </application>
 
 </manifest>

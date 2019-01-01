@@ -3,6 +3,10 @@ package android.keralarescue.com.keralarescueandroid.ui.home
 import android.content.Context
 import android.content.Intent
 import android.keralarescue.com.keralarescueandroid.R
+import android.keralarescue.com.keralarescueandroid.ui.emergency_contacts.EmergencyContactsActivity
+import android.keralarescue.com.keralarescueandroid.ui.emergency_sos.EmergencySosActivity
+import android.keralarescue.com.keralarescueandroid.ui.prepare.PrepareActivity
+import android.keralarescue.com.keralarescueandroid.ui.resuephotos.RescuePhotosActivity
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
@@ -30,16 +34,21 @@ class HomeActivity:AppCompatActivity() {
     }
 
     private fun initUI() {
-        emergency_sos_btn.setOnClickListener({
-            //TODO
-            this.toastComingSoon()
-        })
 
-        prepare_btn.setOnClickListener { this.toastComingSoon() }
+        emergency_sos_btn.setOnClickListener {
+            startActivity(EmergencySosActivity.getNewIntent(this))
+        }
+
+        prepare_btn.setOnClickListener {
+            startActivity(PrepareActivity.getNewIntent(this))
+        }
         after_a_flood_btn.setOnClickListener { this.toastComingSoon() }
-        emergency_contact_btn.setOnClickListener { this.toastComingSoon() }
-        rescue_photos_btn.setOnClickListener { this.toastComingSoon() }
-
+        emergency_contact_btn.setOnClickListener {
+            startActivity(EmergencyContactsActivity.getNewIntent(this))
+        }
+        rescue_photos_btn.setOnClickListener {
+            startActivity(RescuePhotosActivity.getNewIntent(this))
+        }
     }
 
 
