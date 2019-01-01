@@ -21,12 +21,16 @@ class RescuePhotosActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.rescue_photo_activity)
         recyclerView = rescue_photo_recycleview
+
+        setUpActionBar()
+        initRecycleView()
+
     }
 
     override fun onStart() {
         super.onStart()
         fetchPhotos()
-        initRecycleView()
+
     }
 
     ////////////////////////////////////////////
@@ -46,6 +50,13 @@ class RescuePhotosActivity : AppCompatActivity() {
             adapter = viewAdapter
         }
     }
+
+    private fun setUpActionBar() {
+        setSupportActionBar(findViewById(R.id.my_toolbar))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setTitle(R.string.rescue_photos)
+    }
+
 
     ///////////////////////////////////////////
 
