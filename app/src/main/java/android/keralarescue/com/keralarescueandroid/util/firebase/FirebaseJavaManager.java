@@ -96,4 +96,26 @@ public class FirebaseJavaManager {
             }
         });
     }
+
+    public static void loadContactSections(String path, @NonNull final FireBaseCallback callback) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference dataBaseReference = database.getReference(path);
+
+        dataBaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                List<String> models = new ArrayList<>();
+                for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
+                    String model =  postSnapshot.getValue(String.class);
+                    models.add(model);
+
+                }
+                callback.onSuccess(models);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+            }
+        });
+    }
 }

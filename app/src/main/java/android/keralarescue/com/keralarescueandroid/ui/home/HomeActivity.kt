@@ -3,12 +3,11 @@ package android.keralarescue.com.keralarescueandroid.ui.home
 import android.content.Context
 import android.content.Intent
 import android.keralarescue.com.keralarescueandroid.R
+import android.keralarescue.com.keralarescueandroid.ui.emergency_contacts.EmergencyContactsActivity
 import android.keralarescue.com.keralarescueandroid.ui.emergency_sos.EmergencySosActivity
 import android.keralarescue.com.keralarescueandroid.ui.prepare.PrepareActivity
 import android.keralarescue.com.keralarescueandroid.ui.resuephotos.RescuePhotosActivity
-import android.keralarescue.com.keralarescueandroid.util.firebase.FireBaseManager
 import android.os.Bundle
-import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_home.*
@@ -44,7 +43,9 @@ class HomeActivity:AppCompatActivity() {
             startActivity(PrepareActivity.getNewIntent(this))
         }
         after_a_flood_btn.setOnClickListener { this.toastComingSoon() }
-        emergency_contact_btn.setOnClickListener { this.toastComingSoon() }
+        emergency_contact_btn.setOnClickListener {
+            startActivity(EmergencyContactsActivity.getNewIntent(this))
+        }
         rescue_photos_btn.setOnClickListener {
             startActivity(RescuePhotosActivity.getNewIntent(this))
         }
