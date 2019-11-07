@@ -21,4 +21,4 @@ This will be an android version of Kerala Rescue App. This app will help the use
     - Health management 
     - etc.
 - Emergency Contacts
-- Resuce Photo of 2018 
+- Resuce Photo of 2018 .
